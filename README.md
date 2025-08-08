@@ -170,7 +170,9 @@ GitHub: @Maridi Kumar Koneti
 
 LinkedIn: https://www.linkedin.com/in/maridikumarkoneti/
 
-MIT License
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
 
 Copyright (c) 2025 [Maridi Kumar Koneti]
 
@@ -192,7 +194,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
 
