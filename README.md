@@ -1,127 +1,171 @@
-In this project, let's build a **Match Game** by applying the concepts we have learned till now.
+# 🎯 Match Game
 
-### Refer to the video below:
+A fast-paced memory and matching game built using React. This app challenges players to quickly find matching images before time runs out. Built with reusable components, timer logic, and category-based filtering, it's a great example of intermediate React development.
 
-<br/>
-<div style="text-align: center;">
-  <video style="max-width:80%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/match-game-output.mp4" type="video/mp4">
-  </video>
-</div>
-<br/>
+---
 
-### Design Files
+## 🔗 Live Demo
 
-<details>
-<summary>Click to view</summary>
+[View Live Game](https://MaridiMathGame.ccbp.tech)
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/match-game-sm-outputs.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Match Game](https://assets.ccbp.in/frontend/content/react-js/match-game-lg-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Scorecard](https://assets.ccbp.in/frontend/content/react-js/match-game-score-card-lg-output.png)
+---
 
-</details>
+## 📸 Preview
 
-### Set Up Instructions
+### Scorecard View
 
-<details>
-<summary>Click to view</summary>
+![Scorecard](https://assets.ccbp.in/frontend/content/react-js/match-game-score-card-lg-output.png)
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+---
 
-### Completion Instructions
+## 🚀 Features
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+- 🧠 Match the correct image from multiple thumbnails
+- ⏱️ Countdown timer starting from 60 seconds
+- 🎯 Score tracking based on correct matches
+- 🧭 Category-based filtering (Fruits, Animals, Places)
+- 🔁 Replay option on game over
+- 🎨 Responsive UI across devices
+- 📷 Game assets with correct alt tags for accessibility
 
-The app must have the following functionalities
+---
 
-- Initially,
-  - Score should be `0` and time should be `60` sec
-  - The image to be matched should have the src attribute value as the value of the key `imageUrl` from the first object in **imagesList** provided
-  - The **Fruits** tab should be active and the thumbnails with **FRUIT** as their category should be displayed
-- The timer should start running backwards from the `60` sec
-- When a tab is clicked, then the thumbnails in the corresponding category should be displayed
-- When a thumbnail is clicked, if that is matched with the image to be matched,
-  - Score is incremented by one
-  - The new image to be matched should be generated randomly among the value of the key `imageUrl` from **imagesList** provided
-- When a thumbnail is clicked, if it is not matched with the image to be matched,
-  - The game should end, and the [Scorecard](https://assets.ccbp.in/frontend/content/react-js/match-game-score-card-lg-output.png) view should be displayed
-  - When **PLAY AGAIN** button is clicked, then we should be able to play the game again
-    - The score and time values should be reset to `0` and `60` sec respectively
-    - The image to be matched should reset to the value of the key `imageUrl` from the first object in **imagesList** provided
-    - The active tab should reset to **Fruits**, and the thumbnails with **FRUIT** as their category should be displayed
-- When the timer reached `0` sec, then the game should end, and the [Scorecard](https://assets.ccbp.in/frontend/content/react-js/match-game-score-card-lg-output.png) view should be displayed
-- The App is provided with `tabsList`. It consists of a list of tabItem objects with the following properties in each tabItem object
+## 📁 Folder Structure
 
-  |     Key     | Data Type |
-  | :---------: | :-------: |
-  |    tabId    |  String   |
-  | displayText |  String   |
+src/
+├── components/
+│ ├── Header/
+│ ├── MatchGame/
+│ ├── TabItem/
+│ ├── ThumbnailItem/
+│ └── ScoreCard/
+├── App.js
+└── index.js
 
-- The App is provided with `imagesList`. It consists of a list of imageItem objects with the following properties in each imageItem object
 
-  |     Key      | Data Type |
-  | :----------: | :-------: |
-  |      id      |  String   |
-  |   imageUrl   |  String   |
-  | thumbnailUrl |  String   |
-  |   category   |  String   |
+---
 
-</details>
+## 🧪 Test Requirements (Passes All)
 
-### Important Note
+- "Image to match" has `alt="match"`
+- All thumbnails have `alt="thumbnail"`
+- Scorecard assets follow specified `alt` values:
+  - `alt="reset"` for play again
+  - `alt="trophy"` for trophy image
+  - `alt="website logo"` for logo
+  - `alt="timer"` for timer image
 
-<details>
-<summary>Click to view</summary>
+---
 
-<br/>
+## 🛠️ Tech Stack
 
-**The following instructions are required for the tests to pass**
+- React
+- JavaScript (ES6+)
+- CSS3
+- React State & Props
+- React Lifecycle Methods
+- setInterval for Timer Logic
 
-- The image to be matched in the app should have the alt as **match**
-- The thumbnail images in the app should have the alt as **thumbnail**
+---
 
-</details>
+## 📦 Installation
 
-### Resources
+```bash
+git clone https://github.com/yourusername/match-game.git
+cd match-game
+npm install
+npm start
 
-<details>
-<summary>Image URLs</summary>
 
-- [https://assets.ccbp.in/frontend/react-js/match-game-bg.png](https://assets.ccbp.in/frontend/react-js/match-game-bg.png)
-- [https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png](https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png)
-- [https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png](https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png)
-- [https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png](https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png) alt should be **website logo**
-- [https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png](https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png) alt should be **timer**
-- [https://assets.ccbp.in/frontend/react-js/match-game-play-again-img.png](https://assets.ccbp.in/frontend/react-js/match-game-play-again-img.png) alt should be **reset**
-- [https://assets.ccbp.in/frontend/react-js/match-game-trophy.png](https://assets.ccbp.in/frontend/react-js/match-game-trophy.png) alt should be **trophy**
+---
 
-</details>
+## 🧪 Test Requirements (Passes All)
 
-<details>
-<summary>Colors</summary>
+- "Image to match" has `alt="match"`
+- All thumbnails have `alt="thumbnail"`
+- Scorecard assets follow specified `alt` values:
+  - `alt="reset"` for play again
+  - `alt="trophy"` for trophy image
+  - `alt="website logo"` for logo
+  - `alt="timer"` for timer image
 
-<br/>
+---
 
-<div style="background-color:#2c0e3a; width: 150px; padding: 10px; color: white">Hex: #2c0e3a</div>
-<div style="background-color:#ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color:#fec653; width: 150px; padding: 10px; color: black">Hex: #fec653</div>
-<div style="background-color:#cf60c8; width: 150px; padding: 10px; color: black">Hex: #cf60c8</div>
-</details>
+## 🛠️ Tech Stack
 
-<details>
-<summary>Font-families</summary>
+- React
+- JavaScript (ES6+)
+- CSS3
+- React State & Props
+- React Lifecycle Methods
+- setInterval for Timer Logic
 
-- Roboto
+---
 
-</details>
+## 📦 Installation
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+```bash
+git clone https://github.com/yourusername/match-game.git
+cd match-game
+npm install
+npm start
+
+🧠 Gameplay Instructions
+Game starts with a score of 0 and 60 seconds.
+
+Match the main image with the correct thumbnail.
+
+Each correct match gives +1 score and new image.
+
+If incorrect thumbnail is clicked or time runs out:
+
+Game ends
+
+Scorecard is shown
+
+Click "PLAY AGAIN" to restart the game.
+
+📦 Assets & Resources
+All assets are pre-provided:
+
+Backgrounds, logo, icons, and UI elements
+
+Assets Folder & URLs
+
+Resources
+Match Image: alt="match"
+
+Thumbnail Images: alt="thumbnail"
+
+Timer Image: alt="timer"
+
+Logo: alt="website logo"
+
+Reset Button Image: alt="reset"
+
+Trophy Image: alt="trophy"
+
+🎨 Design References
+Small Screens Output
+
+Large Screens Output
+
+🌈 Colors & Typography
+Colors:
+
+Purple: #2c0e3a
+
+Yellow: #fec653
+
+Pink: #cf60c8
+
+White: #ffffff
+
+Font Family:
+
+Roboto
+
+🙋‍♂️ Author
+GitHub: @Maridi Kumar Koneti
+
+LinkedIn: https://www.linkedin.com/in/maridikumarkoneti/
